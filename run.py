@@ -3,7 +3,7 @@ from passwords import Password
 
 
 def create_account(first_name, last_name, user_name, password):
-    accounts = Accounts('dennis', 'Kamau', 'DK-denno', '1234567890')
+    accounts = Accounts(first_name, last_name, user_name, password)
     return accounts
 
 
@@ -28,7 +28,7 @@ def display_accounts():
 
 
 def create_page(page, password):
-    passwords = Password('facebook', '12345')
+    passwords = Password(page, password)
     return passwords
 
 
@@ -57,7 +57,7 @@ def main():
     print('Use the following numbers to pick their corresponding values')
     while True:
 
-        print(" 1) LOGIN \n 2) SIGN UP \n 3) ABOUT PASSLOCK \n")
+        print(" 1) LOGIN \n 2) SIGN UP \n 3) ABOUT PASSLOCK \n 4) Display accounts")
 
         choice = int(input())
         if choice == 1:
@@ -103,6 +103,7 @@ def main():
                         )
                 else:
                     print('NO PASSWORD SAVED YET')
+                    print('\n')
 
         if choice == 2:
             print('NEW ACCOUNT')
@@ -161,7 +162,6 @@ def main():
                         )
                 else:
                     print('NO PASSWORD SAVED YET')
-                    break
 
         elif choice == 3:
             print('ABOUT PASSLOCK')
@@ -174,8 +174,14 @@ def main():
                 easily,you can use different password and store them in passlock and only have to remember your passlock password. This ca prove to be very helpful especially against hackers.
                           ''')
 
-        else:
-            break
+        elif choice == 4:
+            if display_accounts():
+                for account in display_accounts():
+                    print(
+                        f'{account.user_name}'
+                    )
+            else:
+                print('NO ACCOUNTS')
 
 
 if __name__ == '__main__':

@@ -3,11 +3,11 @@ import unittest
 
 
 class TestPasswords(unittest.TestCase):
-    def setUp(self):
-        self.new_password = Password('facebook', '12345')
-
     def tearDown(self):
         Password.user_passwords = []
+
+    def setUp(self):
+        self.new_password = Password('facebook', '12345')
 
     def test_init(self):
         self.assertEqual(self.new_password.page, 'facebook')
