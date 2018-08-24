@@ -20,3 +20,10 @@ class Password:
         for pagy in cls.user_passwords:
             if pagy.page == pager:
                 return pagy
+
+    @classmethod
+    def page_exists(cls, pager):
+        for pagy in cls.user_passwords:
+            if pagy.page == pager:
+                return pagy
+        return False
