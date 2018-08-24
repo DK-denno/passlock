@@ -16,14 +16,9 @@ class TestPasswords(unittest.TestCase):
 
     def test_save_multiple(self):
         self.new_password.save_page()
-        self.test_password = Password('instagram','4321')
-        self.test_password.save_page()
-        self
-
-
-
-
-
+        test_password = Password('instagram', '4321')
+        test_password.save_page()
+        self.assertEqual(len(Password.user_passwords), 2)
 
 
 if __name__ == '__main__':
