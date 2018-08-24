@@ -13,7 +13,7 @@ These are the behaviours/features that the application implements for use by a u
 * Generate a password for a new credential/account
 
 ### SetUp / Installation Requirements
-#####Prerequisites
+##### Prerequisites
 * python3.6
 * pip
 
