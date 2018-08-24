@@ -24,9 +24,9 @@ In your terminal:
  * $ cd Passlock
 ### Running the Application
 To run the application, in your terminal:
-  $ #!/usr/bin/env python3.6
-  $ chmod +x run.py.py
-  $ ./run.py
+ * $ #!/usr/bin/env python3.6
+ * $ chmod +x run.py.py
+ * $ ./run.py
 
 ### Technologies Used
 * Python3.6
