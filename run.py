@@ -60,7 +60,17 @@ def main():
         print(' 1) Save new password \n 2) Delete password \n 3) Display saved passwords ')
 
         log_choice = int(input())
-        # if log_choice == 1
+        if log_choice == 1:
+            print('New page')
+            print('*'*100)
+
+            print('Page name')
+            page = input()
+
+            print('password')
+            password = input()
+
+            #
 
 
 if __name__ == '__main__':
