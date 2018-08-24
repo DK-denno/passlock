@@ -24,4 +24,10 @@ from passwords import Password
         passwords = Password('facebook', '12345')
         return passwords
 
-    def 
+    def save_page(passwords):
+        passwords.save_page()
+
+    def delete_page(passwords):
+        passwords.delete_page()
+
+    def display_pages
