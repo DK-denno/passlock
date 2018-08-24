@@ -30,4 +30,5 @@ from passwords import Password
     def delete_page(passwords):
         passwords.delete_page()
 
-    def display_pages
+    def display_pages():
+        return Password

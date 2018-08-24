@@ -10,4 +10,7 @@ class Password:
 
     def delete_page(self):
         Password.user_passwords.remove(self)
-    
+
+    @classmethod
+    def display_page(cls):
+        return cls.user_passwords

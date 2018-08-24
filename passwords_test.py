@@ -30,6 +30,9 @@ class TestPasswords(unittest.TestCase):
         self.new_password.delete_page()
         self.assertEqual(len(Password.user_passwords), 1)
 
+    def test_display_page(self):
+        self.assertEqual(Password.display_page(), Password.user_passwords)
+
 
 if __name__ == '__main__':
     unittest.main()
