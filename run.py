@@ -28,7 +28,8 @@ def display_accounts():
 
 
 def create_page(page, password):
-    passwords = Password(page, password)
+    passwords =
+     Password(page, password)
     return passwords
 
 
