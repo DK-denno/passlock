@@ -28,8 +28,7 @@ def display_accounts():
 
 
 def create_page(page, password):
-    passwords =
-     Password(page, password)
+    passwords = Password(page, password)
     return passwords
 
 
@@ -58,7 +57,7 @@ def main():
     print('Use the following numbers to pick their corresponding values')
     while True:
 
-        print(" 1) LOGIN \n 2) SIGN UP \n 3) ABOUT PASSLOCK \n 4) Display accounts")
+        print(" 1) LOGIN \n 2) SIGN UP \n 3) ABOUT PASSLOCK \n 4) DISPLAY ACCOUNTS")
 
         choice = int(input())
         if choice == 1:
