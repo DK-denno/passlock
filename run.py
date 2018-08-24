@@ -55,7 +55,12 @@ def main():
         username = input()
         print('Enter passoword')
         password = input()
-        
+
+        print(f'Welcome {username}, Use the following numbers to select their corresponding values')
+        print(' 1) Save new password \n 2) Delete password \n 3) Display saved passwords ')
+
+        log_choice = int(input())
+        # if log_choice == 1
 
 
 if __name__ == '__main__':
