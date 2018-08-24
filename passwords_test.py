@@ -29,7 +29,7 @@ class TestPasswords(unittest.TestCase):
         test_pass.save_page()
         self.new_password.delete_page()
         self.assertEqual(len(Password.user_passwords), 1)
-    de
+
 
 if __name__ == '__main__':
     unittest.main()
