@@ -20,8 +20,8 @@ These are the behaviours/features that the application implements for use by a u
 ### Cloning
 In your terminal:
 
-  $ git clone https://github.com/Dk-denno/passlock/
-  $ cd Passlock
+ * $ git clone https://github.com/Dk-denno/passlock/
+ * $ cd Passlock
 ### Running the Application
 To run the application, in your terminal:
   $ #!/usr/bin/env python3.6
