@@ -7,3 +7,7 @@ class Password:
 
     def save_page(self):
         Password.user_passwords.append(self)
+
+    def delete_page(self):
+        Password.user_passwords.remove(self)
+    
