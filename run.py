@@ -4,7 +4,7 @@ from passwords import Password
 
 def create_account(first_name, last_name, user_name, password):
     accounts = Accounts('dennis', 'Kamau', 'DK-denno', '1234567890')
-    return account
+    return accounts
 
 
 def save_account(accounts):
@@ -13,9 +13,6 @@ def save_account(accounts):
 
 def delete_account(accounts):
     accounts.delete_account()
-
-
-fe
 
 
 def find_accounts(user_name):
@@ -98,15 +95,87 @@ def main():
                 else:
                     print(f'I cant find {page}')
 
-            elif log_choice = 3:
+            elif log_choice == 3:
                 if display_pages():
-                    for pag in display_pages()
-                    print(
-                        f'{pag.page}:{pag.password}'
-                    )
+                    for pag in display_pages():
+                        print(
+                            f'{pag.page}:{pag.password}'
+                        )
+                else:
+                    print('NO PASSWORD SAVED YET')
 
-            else:
-                break
+        if choice == 2:
+            print('NEW ACCOUNT')
+            print('*'*100)
+
+            print('FIRSTNAME')
+            first_name = input()
+
+            print('LASTNAME')
+            last_name = input()
+
+            print('USERNAME')
+            user_name = input()
+
+            print('PASSWORD')
+            password = input()
+
+            save_account(create_account(
+                first_name, last_name, user_name, password))
+            # create and save a new account
+            print('ACCOUNT CREATED')
+            print(f'Welcome {user_name}, Use the following numbers to select their corresponding values')
+            print(
+                ' 1) Save new password \n 2) Delete password \n 3) Display saved passwords ')
+
+            log_choice = int(input())
+            if log_choice == 1:
+                print('New page')
+                print('*'*100)
+
+                print('Page name')
+                page = input()
+
+                print('password')
+                password = input()
+
+                # created and saved page
+                save_page(create_page(page, password))
+
+            elif log_choice == 2:
+                print("Enter the name of the page you want to delete")
+
+                page = input()
+                if isexist_page(page):
+                    remove_page = (page)
+                    del_page(remove_page)
+
+                else:
+                    print(f'I cant find {page}')
+
+            elif log_choice == 3:
+                if display_pages():
+                    for pag in display_pages():
+                        print(
+                            f'{pag.page}:{pag.password}'
+                        )
+                else:
+                    print('NO PASSWORD SAVED YET')
+                    break
+
+        elif choice == 3:
+            print('ABOUT PASSLOCK')
+            print(
+                '''
+                Passlock is an sort of script application that allows you to store 
+                password fro different accounts. In case of many accounts on social media
+                passlock can be used to store the different password from the social media accounts.
+                instead of having to use one password for all your sites so that you can remember
+                easily,you can use different password and store them in passlock and only have to remember your passlock password. This ca prove to be very helpful especially against hackers.
+                          ''')
+
+        else:
+            break
 
 
 if __name__ == '__main__':
