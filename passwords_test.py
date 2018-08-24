@@ -1,4 +1,5 @@
 from passwords import Password
+import unittest
 
 
 class TestPasswords(unittest.TestCase):
